@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קופסת אוכל זכוכית יוקרתית / Premium Glass Lunch Box</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --primary: #e11d48;
+            --primary-hover: #be123c;
+            --dark: #0f172a;
+            --text: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        body {
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            transition: all 0.3s ease;
+        }
+
+        body.he {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.en {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .he-text { display: block; }
+        .en-text { display: none; }
+
+        body.en .he-text { display: none; }
+        body.en .en-text { display: block; }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Nav & Lang Toggle */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .lang-toggle {
+            background-color: var(--white);
+            border: 2px solid var(--border);
+            color: var(--dark);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Product Main Section */
+        .product-hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .thumb {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .thumb:hover {
+            border-color: var(--primary);
+        }
+
+        .product-info h1 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-tag span {
+            font-size: 1rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+            font-weight: normal;
+        }
+
+        /* Features Bullet Points */
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        body.he .features-list li { padding-right: 30px; }
+        body.en .features-list li { padding-left: 30px; }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+            top: 8px;
+        }
+
+        body.he .features-list li::before { right: 0; }
+        body.en .features-list li::before { left: 0; }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(225, 29, 72, 0.3);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(225, 29, 72, 0.4);
+            color: var(--white);
+        }
+
+        /* Review Badges */
+        .badge-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #fff1f2;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            .product-hero { padding: 20px; gap: 20px; }
+            .product-info h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body class="he" dir="rtl">
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Eco<span>Gary</span></a>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="he-text">🌐 English</span>
+                <span class="en-text">🌐 עברית</span>
+            </button>
+        </nav>
+
+        <section class="product-hero">
+            <div class="product-images">
+                <img src="S8d9d5c404b414e38800eb746506accff8.jpeg" id="mainImage" alt="Eco-Gary Glass Lunch Box" class="main-image" onerror="this.src='https://placehold.co/600x400/eeeeee/999999?text=Image+Missing'">
+                
+                <div class="thumbnail-grid">
+                    <img src="S8d9d5c404b414e38800eb746506accff8.jpeg" class="thumb" onclick="changeImage('S8d9d5c404b414e38800eb746506accff8.jpeg')">
+                    <img src="S90aea0058206420da774a04d6138c8c97.jpeg" class="thumb" onclick="changeImage('S90aea0058206420da774a04d6138c8c97.jpeg')">
+                    <img src="Sb726f8d274a84275aba2da16723344b0r.jpg" class="thumb" onclick="changeImage('Sb726f8d274a84275aba2da16723344b0r.jpg')">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="badge-container">
+                    <span class="badge he-text">🔥 מוצר נבחר - Choice</span>
+                    <span class="badge en-text">🔥 Choice Item</span>
+                    <span class="badge he-text">⭐ דירוג 3.8 כוכבים</span>
+                    <span class="badge en-text">⭐ 3.8 Star Rating</span>
+                </div>
+
+                <div class="he-text">
+                    <h1>קופסת אוכל זכוכית איכותית מבית Eco-Gary</h1>
+                    <p>הפתרון המושלם לארוחות בריאות, מאורגנות וטריות מחוץ לבית! קופסת בנטו יוקרתית מזכוכית עמידה (BPA-Free) עם תאים מופרדים לחלוטין השומרים על הפרדה מלאה בין המאכלים ואטימה מוחלטת מפני נזילות.</p>
+                    
+                    <div class="price-tag">₪49.37 <span>₪98.00</span></div>
+
+                    <ul class="features-list">
+                        <li><strong>זכוכית בורוסיליקט איכותית:</strong> עמידה בחום, מתאימה למיקרוגל, לתנור ולמדיח הכלים.</li>
+                        <li><strong>חלוקה חכמה לתאים:</strong> מניעה ערבוב של מאכלים ושומרת על הטריות והטעם המקורי.</li>
+                        <li><strong>אטימה הרמטית מלאה:</strong> מכסה עם מנגנון לחיצה וסיליקון המונע נזילות לחלוטין (100% Leak-Proof).</li>
+                        <li><strong>בטוח לחלוטין לשימוש:</strong> חומרים נקיים מרעלים, ללא BPA, לשמירה מקסימלית על הבריאות.</li>
+                        <li><strong>משלוח חינם:</strong> זמין תחת תנאי Choice של עליאקספרס למשלוח מהיר ומבוטח.</li>
+                    </ul>
+                    <a href="https://s.click.aliexpress.com/e/_c365OjFv" target="_blank" class="cta-button">🛍️ לרכישה ישירה באלי-אקספרס</a>
+                </div>
+
+                <div class="en-text">
+                    <h1>Eco-Gary BPA-Free Glass Lunch Box</h1>
+                    <p>The perfect partner for healthy, organized, and fresh meals on the go! A premium Bento-style lunch box made of durable glass with perfectly separated compartments to prevent mixing and ensure zero leaks.</p>
+                    
+                    <div class="price-tag">₪49.37 <span>₪98.00</span></div>
+
+                    <ul class="features-list">
+                        <li><strong>Premium Borosilicate Glass:</strong> Heat-resistant, safe for microwave, oven, and dishwasher.</li>
+                        <li><strong>Smart Compartments:</strong> Keeps your food separated to preserve original freshness and taste.</li>
+                        <li><strong>100% Leak-Proof Seal:</strong> Snap-locking lid with silicone ring guarantees absolute spill protection.</li>
+                        <li><strong>Safe & Healthy:</strong> Non-toxic, eco-friendly, and completely BPA-Free materials.</li>
+                        <li><strong>Free Shipping:</strong> Eligible for fast and tracked AliExpress Choice delivery.</li>
+                    </ul>
+                    <a href="https://s.click.aliexpress.com/e/_c365OjFv" target="_blank" class="cta-button">🛍️ Buy Now on AliExpress</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 כל הזכויות שמורות. קישור שותפים מורשה לאלי-אקספרס.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            if (body.classList.contains('he')) {
+                body.classList.remove('he');
+                body.classList.add('en');
+                body.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            } else {
+                body.classList.remove('en');
+                body.classList.add('he');
+                body.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'he');
+            }
+        }
+        
+        function changeImage(imgSrc) {
+            document.getElementById('mainImage').src = imgSrc;
+        }
+    </script>
+</body>
+</html>
