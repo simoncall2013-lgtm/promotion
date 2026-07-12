@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started on DigitalOcean - CloudPromo</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=wqjA86Mmu3GGTuyl42uaszKMX2w5A2NmXmgt0iDOxN1zVtBhKzIgeUDzi0dHfoJpGcx31frG7ritYLpHE_RYvXeNFhlDLMUFPx-zPNLogCz1VxyW1qhZ3-aOdkEpdvTx58-f8mCJsEAKwvkI0VZwi0EPTHCdgs2FY6TXyJ_YbVdzM08kNZzrPFJiPVJCcMp284QCz1eQ4cQwCQBCnSGz5inAIAk1b8kDT9nvk2FhroX7sp1tKv7AjQDOLtAzEbayf2AEhZOQLNIqzBpYRbqnILzq-PQqzngqP_FXu9DKjY2YtZpDSrXkYNSimpOXjb6Z" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVEJJSmRHVnRjRjlrWVhSaEdqOEtNR0pqTkRNMU9ESXlZakEyWTJZM1pXUXdNREEyTlRZMlpHRm1OV1JqT1RrMk1EZG1aR0V4WTJSa05URTJNak5rTmhJTEVnY1F4OERmLVlBTUdBRSZmaWxlbmFtZT1pbmRleC5odG1sJm9waT0xMDMxMzUwNTA"/><style>
+        :root {
+            --primary-color: #0080FF;
+            --dark-color: #031B4E;
+            --light-bg: #F3F5F9;
+            --text-color: #4A5568;
+            --accent-color: #00E676;
+        }
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        body { 
+            color: var(--text-color); 
+            background-color: #fff; 
+            line-height: 1.6; 
+        }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 20px 10%; 
+            background: #fff; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+        }
+        .logo { 
+            font-weight: bold; 
+            font-size: 24px; 
+            color: var(--primary-color); 
+        }
+        .lang-btn { 
+            background: var(--primary-color); 
+            color: white; 
+            border: none; 
+            padding: 8px 16px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background: #0066cc;
+        }
+        .hero { 
+            background: linear-gradient(135deg, #031B4E 0%, #0046B3 100%); 
+            color: white; 
+            padding: 100px 10%; 
+            text-align: center; 
+        }
+        .hero h1 { 
+            font-size: 42px; 
+            margin-bottom: 20px; 
+            font-weight: 700;
+        }
+        .hero p { 
+            font-size: 18px; 
+            margin-bottom: 35px; 
+            max-width: 700px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            opacity: 0.9; 
+        }
+        .cta-btn { 
+            display: inline-block; 
+            background: var(--accent-color); 
+            color: var(--dark-color); 
+            text-decoration: none; 
+            padding: 16px 36px; 
+            font-weight: bold; 
+            font-size: 18px; 
+            border-radius: 4px; 
+            box-shadow: 0 4px 15px rgba(0,230,118,0.4); 
+            transition: transform 0.2s, box-shadow 0.2s; 
+        }
+        .cta-btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(0,230,118,0.6);
+        }
+        .features { 
+            padding: 80px 10%; 
+            background: var(--light-bg); 
+            text-align: center; 
+        }
+        .features h2 { 
+            font-size: 32px; 
+            color: var(--dark-color); 
+            margin-bottom: 50px; 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+        .card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+            text-align: right;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+        }
+        .card h3 { 
+            color: var(--dark-color); 
+            margin-bottom: 15px; 
+            font-size: 20px;
+        }
+        footer { 
+            background: var(--dark-color); 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 14px; 
+            clear: both;
+        }
+        footer p {
+            opacity: 0.7;
+        }
+        
+        /* LTR Layout adjustments */
+        html[dir="ltr"] .card {
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 30px; }
+            .hero p { font-size: 16px; }
+            .cta-btn { font-size: 16px; padding: 12px 28px; }
+            header { padding: 15px 5%; }
+            .features { padding: 50px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CloudPromo</div>
+        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
+    </header>
+
+    <section class="hero">
+        <h1 id="heroTitle">הקם את תשתית הענן שלך ב-DigitalOcean וקבל זיכוי מתנה</h1>
+        <p id="heroDesc">התחל לבנות עם שרתי ה-Droplets החזקים, מסדי נתונים מנוהלים ואפליקציות ענן מבוססות קובנטיס בקלות ובמהירות. קבל זיכוי ייחודי למצטרפים חדשים דרך הקישור שלנו!</p>
+        <a href="https://m.do.co/c/d72fb544546b" class="cta-btn" id="ctaBtn" target="_blank">לקבלת הזיכוי והרשמה חינם</a>
+    </section>
+
+    <section class="features">
+        <h2 id="featuresTitle">למה לבחור ב-DigitalOcean?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 id="f1Title">פשטות מנצחת</h3>
+                <p id="f1Desc">ממשק ניהול (Dashboard) נקי ואינטואיטיבי המאפשר להרים שרת בשניות ספורות.</p>
+            </div>
+            <div class="card">
+                <h3 id="f2Title">ביצועים מירביים</h3>
+                <p id="f2Desc">אחסון SSD מהיר, מעבדים חזקים ותשתית רשת יציבה לכל אפליקציה.</p>
+            </div>
+            <div class="card">
+                <h3 id="f3Title">תיעוד מקיף</h3>
+                <p id="f3Desc">אלפי מדריכים מפורטים שמכסים כל הגדרה, קונפיגורציה או טכנולוגיה שתרצה להריץ.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footerText">© כל הזכויות שמורות. אתר זה הוא אתר שותפים עצמאי.</p>
+    </footer>
+
+    <script>
+        const content = {
+            he: {
+                heroTitle: "הקם את תשתית הענן שלך ב-DigitalOcean וקבל זיכוי מתנה",
+                heroDesc: "התחל לבנות עם שרתי ה-Droplets החזקים, מסדי נתונים מנוהלים ואפליקציות ענן מבוססות קובנטיס בקלות ובמהירות. קבל זיכוי ייחודי למצטרפים חדשים דרך הקישור שלנו!",
+                ctaBtn: "לקבלת הזיכוי והרשמה חינם",
+                featuresTitle: "למה לבחור ב-DigitalOcean?",
+                f1Title: "פשטות מנצחת",
+                f1Desc: "ממשק ניהול (Dashboard) נקי ואינטואיטיבי המאפשר להרים שרת בשניות ספורות.",
+                f2Title: "ביצועים מירביים",
+                f2Desc: "אחסון SSD מהיר, מעבדים חזקים ותשתית רשת יציבה לכל אפליקציה.",
+                f3Title: "תיעוד מקיף",
+                f3Desc: "אלפי מדריכים מפורטים שמכסים כל הגדרה, קונפיגורציה או טכנולוגיה שתרצה להריץ.",
+                footerText: "© כל הזכויות שמורות. אתר זה הוא אתר שותפים עצמאי.",
+                btnText: "English"
+            },
+            en: {
+                heroTitle: "Deploy Your Cloud Infrastructure on DigitalOcean & Get Free Credit",
+                heroDesc: "Start building with powerful Droplets, managed databases, and Kubernetes cloud applications quickly and easily. Get an exclusive free credit for new users via our link!",
+                ctaBtn: "Claim Your Free Credit & Sign Up",
+                featuresTitle: "Why Choose DigitalOcean?",
+                f1Title: "Ultimate Simplicity",
+                f1Desc: "Clean and intuitive dashboard allowing you to spin up a server in just a few seconds.",
+                f2Title: "High Performance",
+                f2Desc: "Lightning-fast SSD storage, powerful processors, and a highly stable network infrastructure.",
+                f3Title: "Rich Documentation",
+                f3Desc: "Thousands of in-depth tutorials covering every setup, configuration, or stack you want to run.",
+                footerText: "© All rights reserved. This is an independent referral landing page.",
+                btnText: "עברית"
+            }
+        };
+
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            const html = document.documentElement;
+            if (currentLang === 'he') {
+                currentLang = 'en';
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+            } else {
+                currentLang = 'he';
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'he');
+            }
+            
+            document.getElementById('langBtn').innerText = content[currentLang].btnText;
+            document.getElementById('heroTitle').innerText = content[currentLang].heroTitle;
+            document.getElementById('heroDesc').innerText = content[currentLang].heroDesc;
+            document.getElementById('ctaBtn').innerText = content[currentLang].ctaBtn;
+            document.getElementById('featuresTitle').innerText = content[currentLang].featuresTitle;
+            document.getElementById('f1Title').innerText = content[currentLang].f1Title;
+            document.getElementById('f1Desc').innerText = content[currentLang].f1Desc;
+            document.getElementById('f2Title').innerText = content[currentLang].f2Title;
+            document.getElementById('f2Desc').innerText = content[currentLang].f2Desc;
+            document.getElementById('f3Title').innerText = content[currentLang].f3Title;
+            document.getElementById('f3Desc').innerText = content[currentLang].f3Desc;
+            document.getElementById('footerText').innerText = content[currentLang].footerText;
+        }
+    </script>
+</body>
+</html>
