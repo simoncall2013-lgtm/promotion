@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freecash - Earn Real Money / מרוויחים כסף אמיתי</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TLpaSwUCLbQI-CSaBLbNomceCLrJyTVoUokE10UtSsXyJrgdBdakZizCZrRGTZ1ny7dsHNE6LeFZRcg-fsG5bCqXGG5PfwQTnLqwxnJ_DxzrdjWXGgGc4ryPztkCu6Pc8lqv6hvCW3_tkfcUdI6KO0jCTcRxDhOywCpIMHu696hCPhqNpCQQqc5IjmN2-beVQ-yXgv5GpnlzO8njkPHU9JJCKSkToY1eAsSvECMbhgReos-i2Zk6sbSROhZn_iLC_RQtkBwqm_5XRbic8Z1It6olEp9wxyUs3m_IEdMfmFJsl2Vm6mX_Cw_i206WNUZnSanxlZbp_TFs08YpFwn9zJ6O3Xn-P2-iZw8Vov24Al0" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pCaE16VmpNREprWVRnMU1HRm1NVGMxTURBd05qVTJObU5rWVRjek16QXpPREExWm1VMllUZzFaR1V4TVRZME5Ea1NDeElIRU1mQTNfbUFEQmdCJmZpbGVuYW1lPWZyZWVjYXNoX2ZpbmFsX2xhbmRpbmdfcGFnZS5odG1sJm9waT0xMDMxMzUwNTA"/><style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --primary: #00e065;
+            --primary-hover: #00c257;
+            --dark: #0d1117;
+            --card-bg: #161b22;
+            --text: #c9d1d9;
+            --white: #ffffff;
+            --border: #30363d;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        body.he {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.en {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .he-text { display: block; }
+        .en-text { display: none; }
+
+        body.en .he-text { display: none; }
+        body.en .en-text { display: block; }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .lang-toggle {
+            background-color: transparent;
+            border: 2px solid var(--border);
+            color: var(--white);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Hero */
+        header {
+            text-align: center;
+            padding: 70px 30px;
+            background: linear-gradient(180deg, #1f2937 0%, #0d1117 100%);
+            border-radius: 24px;
+            margin-bottom: 50px;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            color: var(--white);
+            font-size: 3.2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        header h1 span {
+            color: var(--primary);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            color: #8b949e;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0, 224, 101, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Steps */
+        .steps-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+        }
+
+        .steps-section h2 {
+            color: var(--white);
+            text-align: center;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background: var(--dark);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s;
+        }
+        
+        .step-item:hover {
+            border-color: rgba(0, 224, 101, 0.5);
+        }
+
+        body.he .step-item { border-right: 4px solid var(--primary); border-left: none; }
+        body.en .step-item { border-left: 4px solid var(--primary); border-right: none; }
+
+        .step-number {
+            background-color: rgba(0, 224, 101, 0.15);
+            color: var(--primary);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            border: 2px solid var(--primary);
+        }
+
+        body.he .step-number { margin-left: 25px; margin-right: 0; }
+        body.en .step-number { margin-right: 25px; margin-left: 0; }
+
+        .step-text h4 {
+            color: var(--white);
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .step-text p { margin: 0; color: #8b949e; }
+
+        /* CTA Bottom */
+        .cta-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(0,224,101,0.1) 0%, rgba(13,17,23,1) 100%);
+            border: 1px solid var(--primary);
+            border-radius: 24px;
+            box-shadow: 0 0 30px rgba(0, 224, 101, 0.15);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px -5px rgba(0, 224, 101, 0.4);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.05) translateY(-2px);
+            color: var(--dark);
+            box-shadow: 0 15px 25px -5px rgba(0, 224, 101, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #484f58;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body class="he" dir="rtl">
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <a href="https://freecash.com/r/111BSR" target="_blank" class="logo">Free<span>cash</span></a>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="he-text">🌐 English</span>
+                <span class="en-text">🌐 עברית</span>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <header>
+            <div class="he-text">
+                <h1>הזמן שלכם שווה <span>כסף!</span> 💸</h1>
+                <p>הצטרפו ל-Freecash, הפלטפורמה המובילה בעולם שמשלמת לכם כסף אמיתי על משחקים, סקרים והורדת אפליקציות. שעות הפנאי שלכם מעולם לא היו רווחיות יותר.</p>
+                <a href="https://freecash.com/r/111BSR" target="_blank" class="cta-button">להרשמה מהירה בחינם</a>
+            </div>
+            <div class="en-text">
+                <h1>Your Time is Worth <span>Money!</span> 💸</h1>
+                <p>Join Freecash, the world's leading platform that pays you real cash for playing games, taking surveys, and downloading apps. Your free time has never been more profitable.</p>
+                <a href="https://freecash.com/r/111BSR" target="_blank" class="cta-button">Sign Up For Free</a>
+            </div>
+        </header>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <div class="he-text">
+                    <h3>שחקו והרוויחו</h3>
+                    <p>גלו משחקים חדשים לנייד, הגיעו ליעדים וקבלו תשלום ישירות לחשבון על כל התקדמות שלכם.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Play & Earn</h3>
+                    <p>Discover new mobile games, reach milestones, and get paid directly to your account for your progress.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="he-text">
+                    <h3>משיכה מיידית</h3>
+                    <p>מינימום משיכה נמוך במיוחד! משכו את הכסף שלכם ברגע שהרווחתם אותו, ללא המתנה ארוכה.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Instant Cashouts</h3>
+                    <p>Extremely low withdrawal limits! Cash out your earnings as soon as you make them, with no long waits.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <div class="he-text">
+                    <h3>מגוון אפשרויות תשלום</h3>
+                    <p>קבלו את הכסף ל-PayPal, בארנק קריפטו, או ככרטיסי מתנה לאמזון, נטפליקס וגוגל פליי.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Multiple Payment Options</h3>
+                    <p>Receive your money via PayPal, Crypto wallets, or as Gift Cards for Amazon, Netflix, and Google Play.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps Section -->
+        <div class="steps-section">
+            <h2 class="he-text">איך מתחילים להרוויח?</h2>
+            <h2 class="en-text">How To Start Earning?</h2>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-text he-text">
+                        <h4>פותחים חשבון בחינם</h4>
+                        <p>הרשמה קצרה ופשוטה באמצעות גוגל, סטים או אימייל. ללא דמי הרשמה וללא התחייבות.</p>
+                    </div>
+                    <div class="step-text en-text">
+                        <h4>Create a Free Account</h4>
+                        <p>Quick and simple registration using Google, Steam, or Email. No fees, no obligations.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-text he-text">
+                        <h4>בוחרים משימה</h4>
+                        <p>היכנסו ללוח המשימות הענק שלנו ופשוט בחרו את מה שמתחשק לכם: לשחק במשחק חדש, לענות על סקר או לבדוק אפליקציה.</p>
+                    </div>
+                    <div class="step-text en-text">
+                        <h4>Choose a Task</h4>
+                        <p>Browse our massive task wall and pick whatever you feel like: playing a new game, taking a survey, or testing an app.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-text he-text">
+                        <h4>מקבלים תשלום</h4>
+                        <p>סיימתם את המשימה? הכסף יופיע בחשבון שלכם. בחרו איך בא לכם למשוך אותו ותיהנו מהרווח!</p>
+                    </div>
+                    <div class="step-text en-text">
+                        <h4>Get Paid</h4>
+                        <p>Finished the task? The funds will appear in your account. Choose how you want to cash out and enjoy your profits!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="cta-section">
+            <h2 class="he-text" style="color: var(--white); margin-top: 0; font-size: 2.2rem;">אלפי משתמשים כבר מרוויחים כל יום!</h2>
+            <p class="he-text" style="margin-bottom: 30px; font-size: 1.1rem; color: #c9d1d9;">אל תפספסו את ההזדמנות להפוך את הזמן הפנוי שלכם להכנסה נוספת.</p>
+            <a href="https://freecash.com/r/111BSR" target="_blank" class="cta-button he-text">👉 לחצו כאן והתחילו להרוויח 👈</a>
+
+            <h2 class="en-text" style="color: var(--white); margin-top: 0; font-size: 2.2rem;">Thousands are already earning daily!</h2>
+            <p class="en-text" style="margin-bottom: 30px; font-size: 1.1rem; color: #c9d1d9;">Don't miss the opportunity to turn your free time into extra income.</p>
+            <a href="https://freecash.com/r/111BSR" target="_blank" class="cta-button en-text">👉 Click Here & Start Earning 👈</a>
+        </div>
+
+        <footer>
+            <div class="he-text">© 2026 כל הזכויות שמורות. קידום פלטפורמת Freecash.</div>
+            <div class="en-text">© 2026 All rights reserved. Promoting the Freecash platform.</div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            if (body.classList.contains('he')) {
+                // Switch to English
+                body.classList.remove('he');
+                body.classList.add('en');
+                body.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            } else {
+                // Switch to Hebrew
+                body.classList.remove('en');
+                body.classList.add('he');
+                body.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'he');
+            }
+        }
+    </script>
+</body>
+</html>
