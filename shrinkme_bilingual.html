@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShrinkMe.io - Shorten URLs and Earn Money</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=O51xjFdq23Xk1Mu2AG35k5kR2qdcT-VYmMsWF6J30vz9aB_Opg4ceZkESizLcP1Nw8KTzhUWHVIL6vao6UwAU83J9I0R5G3GLTESN0S6Wmxu3OqQnVAINwFTQZkeLBZ5G5BdQpDafgMH0lw4gnsuhAQHsfu2leCepdImk7QxqqBvKLGdT5X2gkeFr6wB2SP9zCbPkD2qXl9CJlN2ReXWNm81YRSseSQ1536tJtpVW707LQNlN__eljq6Zl3KyI-TK9gQbTTFzLe50ql0albWH6qe1IUetJMwQFLQqAYN8XIKrkUcxmNCRtK7zUFPMhKcuds_WrvqWSYKiO3UHJ2_QQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVEJJSmRHVnRjRjlrWVhSaEdqOEtNRE15WVRGaE5qRmlNelEzTURWa1lqUXdNREEyTlRZMlltVmtPVFZrWkRjeU1ETm1NVFUwTURneVpERXdPVEZqTlJJTEVnY1F4OERmLVlBTUdBRSZmaWxlbmFtZT1zaHJpbmttZV9iaWxpbmd1YWwuaHRtbCZvcGk9MTAzMTM1MDUw"/><style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800&family=Inter:wght@400;700;800&display=swap');
+
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary: #10b981;
+            --dark: #0f172a;
+            --text: #334155;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        body.he {
+            font-family: 'Heebo', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.en {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .he-text { display: block; }
+        .en-text { display: none; }
+
+        body.en .he-text { display: none; }
+        body.en .en-text { display: block; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation & Toggle */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .lang-toggle {
+            background-color: var(--white);
+            border: 2px solid #e2e8f0;
+            color: var(--dark);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .lang-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: var(--white);
+            padding: 60px 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: var(--dark);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #059669;
+            transform: scale(1.05);
+            color: var(--white);
+        }
+
+        .hero .cta-button {
+            font-size: 1.4rem;
+            padding: 18px 45px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* Language Specific Fixes */
+        body.he .step-number { margin-left: auto; margin-right: auto; }
+        body.en .step-number { margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body class="he" dir="rtl">
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="logo">Shrink<span>Me</span>.io</a>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="he-text">🌐 English</span>
+                <span class="en-text">🌐 עברית</span>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <!-- Hebrew Hero -->
+            <div class="he-text">
+                <h1>קצרו קישורים והתחילו להרוויח כסף</h1>
+                <p>הפכו כל קישור רגיל למקור הכנסה! ב-ShrinkMe תקבלו תשלום על כל לחיצה שמתבצעת על הקישורים שאתם משתפים ברחבי הרשת.</p>
+                <a href="https://shrinkme.io/ref/102283256074745536305" target="_blank" class="cta-button">התחילו עכשיו בחינם 🚀</a>
+            </div>
+            <!-- English Hero -->
+            <div class="en-text">
+                <h1>Shorten URLs and Earn Money</h1>
+                <p>Turn any regular link into a source of income! With ShrinkMe, you get paid for every click on the links you share across the internet.</p>
+                <a href="https://shrinkme.io/ref/102283256074745536305" target="_blank" class="cta-button">Start For Free Now 🚀</a>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <div class="he-text">
+                    <h3>תשלום גבוה במיוחד (CPM)</h3>
+                    <p>אנו מציעים את התעריפים הגבוהים ביותר בשוק לכל 1000 חשיפות/קליקים, מה שמאפשר לכם למקסם רווחים על התנועה שלכם.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Highest Paying Rates (CPM)</h3>
+                    <p>We offer the highest rates in the market per 1000 views/clicks, allowing you to maximize profits from your traffic.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <div class="he-text">
+                    <h3>מינימום משיכה של 5$ בלבד</h3>
+                    <p>לא צריך לחכות חודשים! הרווחתם 5$? אתם יכולים למשוך את הכסף שלכם באופן מיידי לחשבון.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Low $5 Minimum Payout</h3>
+                    <p>No need to wait months! Reached $5? You can withdraw your earnings immediately to your account.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="he-text">
+                    <h3>סטטיסטיקות בזמן אמת</h3>
+                    <p>פאנל ניהול מתקדם המציג לכם נתונים מדויקים, צפיות ורווחים בזמן אמת כדי שתוכלו לייעל את העבודה שלכם.</p>
+                </div>
+                <div class="en-text">
+                    <h3>Real-Time Statistics</h3>
+                    <p>An advanced dashboard showing accurate data, views, and earnings in real-time so you can optimize your strategy.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps-section">
+            <h2 class="section-title he-text">איך זה עובד? ב-3 צעדים</h2>
+            <h2 class="section-title en-text">How It Works in 3 Steps</h2>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="he-text">
+                        <h3>צרו חשבון</h3>
+                        <p>הרשמה מהירה בחינם וללא כל התחייבות.</p>
+                    </div>
+                    <div class="en-text">
+                        <h3>Create an Account</h3>
+                        <p>Quick, free registration with no obligations.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="he-text">
+                        <h3>קצרו קישור</h3>
+                        <p>הדביקו כל קישור אל המערכת בלחיצת כפתור אחת.</p>
+                    </div>
+                    <div class="en-text">
+                        <h3>Shorten your Link</h3>
+                        <p>Paste any URL into our system with one click.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="he-text">
+                        <h3>שתפו והרוויחו</h3>
+                        <p>שתפו את הקישור המקוצר וקבלו כסף על כל צפייה.</p>
+                    </div>
+                    <div class="en-text">
+                        <h3>Share and Earn</h3>
+                        <p>Share your shortened link and get paid for every view.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://shrinkme.io/ref/102283256074745536305" target="_blank" class="cta-button he-text">הירשמו והתחילו עכשיו</a>
+                <a href="https://shrinkme.io/ref/102283256074745536305" target="_blank" class="cta-button en-text">Register and Start Now</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="he-text">© 2026 כל הזכויות שמורות. מקדמים את פלטפורמת ShrinkMe.</div>
+            <div class="en-text">© 2026 All rights reserved. Promoting the ShrinkMe platform.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            if (body.classList.contains('he')) {
+                // Switch to English
+                body.classList.remove('he');
+                body.classList.add('en');
+                body.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            } else {
+                // Switch to Hebrew
+                body.classList.remove('en');
+                body.classList.add('he');
+                body.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'he');
+            }
+        }
+    </script>
+</body>
+</html>
