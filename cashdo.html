@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashdo - קאשבק על כל קנייה</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap');
+
+        :root {
+            --primary: #FF5A5F;
+            --primary-hover: #e0484d;
+            --dark: #2b2b2b;
+            --card-bg: #ffffff;
+            --text: #4a4a4a;
+            --bg: #f4f7f6;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--dark);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        header {
+            text-align: center;
+            padding: 70px 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #ffeef0 100%);
+            border-radius: 24px;
+            margin-bottom: 50px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(255, 90, 95, 0.1);
+        }
+
+        header h1 {
+            color: var(--dark);
+            font-size: 3.2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        header h1 span {
+            color: var(--primary);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            color: #666;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(255, 90, 95, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Steps */
+        .steps-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .steps-section h2 {
+            color: var(--dark);
+            text-align: center;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            border-right: 4px solid var(--primary);
+        }
+
+        .step-number {
+            background-color: #ffeef0;
+            color: var(--primary);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            border: 2px solid var(--primary);
+            margin-left: 25px;
+        }
+
+        .step-text h4 {
+            color: var(--dark);
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .step-text p { margin: 0; color: #666; }
+
+        /* CTA Bottom */
+        .cta-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, #ff7b7f 100%);
+            border-radius: 24px;
+            color: white;
+            box-shadow: 0 15px 30px rgba(255, 90, 95, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--dark);
+            color: white;
+            text-decoration: none;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            border: 2px solid var(--dark);
+        }
+
+        .cta-button:hover {
+            background-color: white;
+            color: var(--dark);
+            transform: scale(1.05);
+        }
+
+        .hero-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 20px -5px rgba(255, 90, 95, 0.4);
+        }
+        
+        .hero-btn:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="https://cashdo.co.il/?ref=ioZOO" class="logo">Cash<span>do</span></a>
+        </nav>
+
+        <header>
+            <h1>קונים באינטרנט? קבלו <span>כסף בחזרה!</span> 💸</h1>
+            <p>למה לשלם מחיר מלא כשאפשר לקבל קאשבק (החזר כספי) על כל קנייה? הצטרפו עכשיו בחינם לפלטפורמת הקאשבק המובילה בישראל וקבלו כסף ישירות לחשבון הבנק על קניות באליאקספרס, KSP, בוקינג, אסוס ועוד מאות חנויות!</p>
+            <a href="https://cashdo.co.il/?ref=ioZOO" target="_blank" class="cta-button hero-btn">להרשמה בחינם</a>
+        </header>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛍️</div>
+                <h3>מעל 300 חנויות</h3>
+                <p>קנו בחנויות האהובות עליכם בארץ ובעולם - מביגוד וטיסות ועד למוצרי אלקטרוניקה, והכל דרך Cashdo.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏦</div>
+                <h3>משיכת כספים קלה</h3>
+                <p>את הכסף שצברתם תוכלו למשוך בקלות היישר לחשבון הבנק שלכם, ל-PayPal או כתווי קנייה (BuyMe).</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h3>100% חינם לתמיד</h3>
+                <p>ההרשמה והשימוש במערכת הם בחינם לחלוטין וללא שום התחייבות או דמי מנוי נסתרים.</p>
+            </div>
+        </div>
+
+        <div class="steps-section">
+            <h2>איך זה עובד? ב-3 צעדים פשוטים:</h2>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <h4>נרשמים בחינם</h4>
+                        <p>פותחים חשבון חדש ב-Cashdo בפחות מדקה ומתחילים לחסוך.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <h4>עוברים לחנות דרך האתר</h4>
+                        <p>מחפשים את החנות שבה תרצו לקנות ב-Cashdo ולוחצים על כפתור "מעבר לחנות".</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <h4>קונים ומקבלים כסף!</h4>
+                        <p>מבצעים את הקנייה כרגיל, וההחזר הכספי (הקאשבק) יופיע בחשבון ה-Cashdo שלכם.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="margin-top: 0; font-size: 2.2rem;">תפסיקו להשאיר כסף על הרצפה!</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">הצטרפו עכשיו לאלפי ישראלים שכבר חוסכים מאות שקלים בשנה על הקניות שלהם ברשת.</p>
+            <a href="https://cashdo.co.il/?ref=ioZOO" target="_blank" class="cta-button">👉 להרשמה מהירה והתחלת רווחים 👈</a>
+        </div>
+
+        <footer>
+            © 2026 כל הזכויות שמורות. קידום פלטפורמת Cashdo.
+        </footer>
+    </div>
+</body>
+</html>
